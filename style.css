@@ -1,0 +1,183 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte e base */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Header fixo com navegação simples */
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Seção de chamada */
+#chamada {
+  background: linear-gradient(to right, #3498db, #1abc9c);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#chamada h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#chamada .btn {
+  background-color: white;
+  color: #1abc9c;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+#chamada .btn:hover {
+  transform: scale(1.05);
+}
+
+/* Proposta e Benefícios */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#proposta, #beneficios, #contato, #depoimentos {
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Lista de benefícios */
+#beneficios ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#beneficios li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+#beneficios li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #1abc9c;
+}
+
+/* Depoimentos */
+blockquote {
+  border-left: 4px solid #1abc9c;
+  padding-left: 15px;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Formulário de contato */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input, form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+form button {
+  padding: 12px;
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #16a085;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  #chamada h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 90%;
+  }
+}
